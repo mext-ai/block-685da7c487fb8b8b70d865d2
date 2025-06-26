@@ -13,8 +13,8 @@ interface BlockProps {
 function DuckModel({ position = [0, 0, 0], scale = 1, autoRotate = false }) {
   const meshRef = useRef<THREE.Group>(null);
   
-  // Load the duck model
-  const gltf = useLoader(GLTFLoader, '/Duck.glb');
+  // Load the duck model from the uploaded URL
+  const gltf = useLoader(GLTFLoader, 'https://content.mext.app/uploads/bae853a8-ee93-4c72-9007-d73e1df8dba9.glb');
   
   // Auto rotation animation
   useFrame((state, delta) => {
